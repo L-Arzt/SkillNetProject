@@ -1,3 +1,9 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/hotel/page": "app/hotel/page.js",
+  "/hotel/[id]/page": "app/hotel/[id]/page.js",
+  "/admin/course/[id]/page": "app/admin/course/[id]/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/admin/course/page": "app/admin/course/page.js",
+  "/api/admin/rooms/delete/route": "app/api/admin/rooms/delete/route.js"
 }

@@ -30,7 +30,7 @@ export default function UpdateRoom({ id, name, peopleMax, price, topic, descript
 
     return (
         <div>
-            <form onSubmit={handleSubmit} className="container flex flex-col gap-y-5">
+            <form onSubmit={handleSubmit} className="container flex flex-col gap-y-5 pt-[200px]">
                 <input type="text" name='id' defaultValue={id} hidden />
                 <Input name="name" required type="text" placeholder="Название курса" defaultValue={name} />
                 <Input name="topic" required type="text" placeholder="Тема" defaultValue={topic} />
