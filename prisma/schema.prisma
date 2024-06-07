@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")jfdlss
+}
+
+model users {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+  role     String
+}
+
+model course {
+  id          Int       @id @default(autoincrement())
+  name        String
+  topic       String
+  description String
+  author      String
+  peopleMax   Int
+  price       Float
+  booking     booking[]
+}
+
+model booking {
+  roomId   course   @relation(fields: [roomsId], references: [id])
+  id       Int      @id @default(autoincrement())
+  fio      String
+  dateFrom DateTime
+  dateTo   DateTime
+  guests   Int
+  phone    String
+  email    String
+  passport String
+  totalSum Int
+  roomsId  Int
+}
